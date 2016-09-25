@@ -15,75 +15,33 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,     TRNS, \
         TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,          UP,   \
         TRNS,TRNS,TRNS,          TRNS,                    TRNS,LEFT,DOWN,RGHT),
-    /* 2: Poker Fn1
-     * ,-----------------------------------------------------------.
-     * |~` | F1| F2| F3| F4| F5| F6| F7| F8| F9|F10|F11|F12|       |
-     * |-----------------------------------------------------------|
-     * |     |   | Up|   |   |   |   |   |   |   |   |Hom|Ins|FnL  |
-     * |-----------------------------------------------------------|
-     * |      |   |   |   |   |Lft|Dwn| Up|Rgt|   |Tsk|End|        |
-     * |-----------------------------------------------------------|
-     * |        |Del|   |   |Mut|VoU|VoD|   |PgU|PgD|Del|          |
-     * |-----------------------------------------------------------|
-     * |    |    |    |         FnS            |    |    |    |    |
-     * `-----------------------------------------------------------'
-     * Fn:  to Fn overlay
-     * FnS: toggle Arrow overlay
-     */
+    /* 2: Poker Fn0 */
     KEYMAP_ANSI(
         GRV, F1  ,F2  ,F3  ,F4  ,F5  ,F6  ,F7  ,F8  ,F9  ,F10 ,F11 ,F12 ,TRNS, \
-        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,INS ,TRNS,TRNS,TRNS,TRNS,TRNS, \
+        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,INS ,TRNS,TRNS,HOME,END ,TRNS, \
         TRNS,TRNS,TRNS,TRNS,PGUP,TRNS,LEFT,DOWN,UP,  RGHT,TRNS,TRNS,     TRNS, \
-        TRNS,TRNS,DEL ,TRNS,TRNS,PGDN,TRNS,TRNS,TRNS,TRNS,TRNS,          TRNS , \
+        TRNS,FN11,DEL ,TRNS,TRNS,PGDN,TRNS,TRNS,TRNS,TRNS,TRNS,          TRNS , \
         TRNS,TRNS,TRNS,          FN3,                     TRNS,TRNS,TRNS,TRNS),
-    /* 3: Poker Fn1 + Shift
-     * ,-----------------------------------------------------------.
-     * |~` | F1| F2| F3| F4| F5| F6| F7| F8| F9|F10|F11|F12|       |
-     * |-----------------------------------------------------------|
-     * |     |   | Up|   |   |   |   |   |   |   |   |Hom|Ins|FnL  |
-     * |-----------------------------------------------------------|
-     * |      |   |   |   |   |Lft|Dwn| Up|Rgt|   |Tsk|End|        |
-     * |-----------------------------------------------------------|
-     * |        |Del|   |   |Mut|VoU|VoD|   |PgU|PgD|Del|          |
-     * |-----------------------------------------------------------|
-     * |    |    |    |         FnS            |    |    |    |    |
-     * `-----------------------------------------------------------'
-     * Fn:  to Fn overlay
-     * FnS: toggle Arrow overlay
-     */
+    /* 3: Poker Fn0.5 */
     KEYMAP_ANSI(
         TRNS,TRNS,TRNS,TRNS,END ,TRNS,HOME,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS, \
         TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,HOME,TRNS,TRNS, \
         TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,LEFT,DOWN,UP,  RGHT,TRNS,TRNS,     TRNS, \
         TRNS,TRNS,BSPC,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,          TRNS, \
         TRNS,TRNS,TRNS,          FN3,                     TRNS,TRNS,TRNS,TRNS),
-    /* 4: Poker Fn2
-     * ,-----------------------------------------------------------.
-     * |~` | F1| F2| F3| F4| F5| F6| F7| F8| F9|F10|F11|F12|       |
-     * |-----------------------------------------------------------|
-     * |     |   | Up|   |   |   |   |   |   |   |   |Hom|Ins|FnL  |
-     * |-----------------------------------------------------------|
-     * |      |   |   |   |   |Lft|Dwn| Up|Rgt|   |Tsk|End|        |
-     * |-----------------------------------------------------------|
-     * |        |Del|   |   |Mut|VoU|VoD|   |PgU|PgD|Del|          |
-     * |-----------------------------------------------------------|
-     * |    |    |    |         FnS            |    |    |    |    |
-     * `-----------------------------------------------------------'
-     * Fn:  to Fn overlay
-     * FnS: toggle Arrow overlay
-     */
+    /* 4: Poker Fn1 */
     KEYMAP_ANSI(
-        GRV, F1,  F2,  F3,  F4,  F5,  F6,  F7,  F8,  F9,  F10, F11, F12, TRNS, \
-        TRNS,FN5 ,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,HOME,INS, TRNS, \
-        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,LEFT,DOWN,UP,  RGHT,FN3, END,      TRNS, \
-        TRNS,DEL, TRNS,TRNS,MUTE,TRNS,TRNS,TRNS,PGUP,PGDN,DEL,           TRNS, \
-        TRNS,TRNS,TRNS,          FN3,                     TRNS,TRNS,TRNS,TRNS),
+        FN21,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,MUTE,VOLD,VOLU,TRNS, \
+        BTLD,FN11,TRNS,TRNS,TRNS,FN10,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,FN12, \
+        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,LEFT,DOWN,UP,  RGHT,TRNS,TRNS,     TRNS, \
+        TRNS,TRNS,TRNS,FN13,TRNS,TRNS,TRNS,TRNS,MPRV,MNXT,TRNS,          TRNS, \
+        TRNS,FN20,TRNS,          MPLY,                    TRNS,TRNS,TRNS,TRNS),
 };
 
 enum macro_id {
+  ELIXIR_PIPE,
   LOREM,
-  NEXT_WORD,
-  PREV_WORD
+  RUN_CONSOLE
 };
 
 const action_t PROGMEM fn_actions[] = {
@@ -92,8 +50,12 @@ const action_t PROGMEM fn_actions[] = {
     [1] = ACTION_LAYER_MOMENTARY(4),  // to Fn2 overlay
     [2] = ACTION_LAYER_MOMENTARY(3),  // to Fn1 + Shift overlay
     [3] = ACTION_LAYER_TOGGLE(1),     // toggle arrow overlay
-    [4] = ACTION_MODS_KEY(MOD_RCTL|MOD_RSFT, KC_ESC), // Task(RControl,RShift+Esc)
-    [5] = ACTION_MACRO(LOREM),
+    [10] = ACTION_MODS_KEY(MOD_RCTL|MOD_RSFT, KC_ESC), // Task(RControl,RShift+Esc)
+    [11] = ACTION_MACRO(LOREM),
+    [12] = ACTION_MACRO(ELIXIR_PIPE),
+    [13] = ACTION_MACRO(RUN_CONSOLE),
+    [20] = ACTION_MODS_KEY(MOD_RCTL|MOD_RALT, KC_DEL), // Ctrl-Alt-Del
+    [21] = ACTION_MODS_KEY(MOD_LCTL, KC_GRV) // Ctrl-` for ConEmu
 };
 
 const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt)
@@ -111,6 +73,19 @@ const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt)
 			 END
 		     ):
 		     MACRO_NONE);
+	  case ELIXIR_PIPE:
+	      return (record->event.pressed ? 
+	              MACRO(I(0), D(LSFT), T(BSLS), T(DOT), U(LSFT), END):
+		      MACRO_NONE);
+	  case RUN_CONSOLE:
+	      return (record->event.pressed ?
+	              MACRO(
+		          D(LGUI), T(R), U(LGUI), W(100),
+			  T(C), T(N), T(S), T(ENT), W(250), W(250), W(250), W(250),
+			  T(LEFT), T(ENT),
+			  END
+	              ):
+		      MACRO_NONE);
      }
      return MACRO_NONE;	 
 };
