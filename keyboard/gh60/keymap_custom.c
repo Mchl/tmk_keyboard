@@ -17,23 +17,23 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         TRNS,TRNS,TRNS,          TRNS,                    TRNS,LEFT,DOWN,RGHT),
     /* 2: Poker Fn0 */
     KEYMAP_ANSI(
-        GRV, F1  ,F2  ,F3  ,F4  ,F5  ,F6  ,F7  ,F8  ,F9  ,F10 ,F11 ,F12 ,TRNS, \
-        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,INS ,TRNS,TRNS,HOME,END ,TRNS, \
-        TRNS,TRNS,TRNS,TRNS,PGUP,TRNS,LEFT,DOWN,UP,  RGHT,TRNS,TRNS,     TRNS, \
-        TRNS,FN11,DEL ,TRNS,TRNS,PGDN,TRNS,TRNS,TRNS,TRNS,TRNS,          TRNS , \
-        TRNS,TRNS,TRNS,          FN3,                     TRNS,TRNS,TRNS,TRNS),
+        GRV, F1  ,F2  ,F3  ,F4  ,F5  ,F6  ,F7  ,F8  ,F9  ,F10 ,F11 ,F12 ,NO  , \
+        NO  ,NO  ,UP  ,NO  ,NO  ,NO  ,NO  ,NO  ,INS ,NO  ,NO  ,HOME,END ,NO  , \
+        TRNS,LEFT,DOWN,RGHT,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,PGUP,PGDN,     TRNS, \
+        TRNS,FN11,DEL ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,          TRNS, \
+        TRNS,TRNS,TRNS,          NO  ,                    TRNS,NO  ,TRNS,TRNS),
     /* 3: Poker Fn0.5 */
     KEYMAP_ANSI(
         TRNS,TRNS,TRNS,TRNS,END ,TRNS,HOME,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS, \
-        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,HOME,TRNS,TRNS, \
-        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,LEFT,DOWN,UP,  RGHT,TRNS,TRNS,     TRNS, \
+        TRNS,TRNS,UP  ,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,HOME,TRNS,TRNS, \
+        TRNS,LEFT,DOWN,RGHT,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,     TRNS, \
         TRNS,TRNS,BSPC,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,          TRNS, \
-        TRNS,TRNS,TRNS,          FN3,                     TRNS,TRNS,TRNS,TRNS),
+        TRNS,TRNS,TRNS,          TRNS,                    TRNS,TRNS,TRNS,TRNS),
     /* 4: Poker Fn1 */
     KEYMAP_ANSI(
         FN21,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,MUTE,VOLD,VOLU,TRNS, \
-        BTLD,FN11,TRNS,TRNS,TRNS,FN10,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,FN12, \
-        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,LEFT,DOWN,UP,  RGHT,TRNS,TRNS,     TRNS, \
+        BTLD,FN11,UP  ,TRNS,TRNS,FN10,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,FN12, \
+        TRNS,LEFT,DOWN,RGHT,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,     TRNS, \
         TRNS,TRNS,TRNS,FN13,TRNS,TRNS,TRNS,TRNS,MPRV,MNXT,TRNS,          TRNS, \
         TRNS,FN20,TRNS,          MPLY,                    TRNS,TRNS,TRNS,TRNS),
 };
@@ -81,7 +81,7 @@ const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt)
 	      return (record->event.pressed ?
 	              MACRO(
 		          D(LGUI), T(R), U(LGUI), W(100),
-			  T(C), T(N), T(S), T(ENT), W(250), W(250), W(250), W(250),
+			  T(C), T(N), T(S), T(ENT), W(250), W(250), W(250), W(250), W(250), W(250),
 			  T(LEFT), T(ENT),
 			  END
 	              ):
