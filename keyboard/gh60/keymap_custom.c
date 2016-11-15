@@ -18,7 +18,7 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     /* 2: Poker Fn0 */
     KEYMAP_ANSI(
         GRV, F1  ,F2  ,F3  ,F4  ,F5  ,F6  ,F7  ,F8  ,F9  ,F10 ,F11 ,F12 ,NO  , \
-        NO  ,NO  ,UP  ,NO  ,NO  ,NO  ,NO  ,NO  ,INS ,NO  ,NO  ,HOME,END ,NO  , \
+        NO  ,NO  ,UP  ,NO  ,NO  ,NO  ,NO  ,NO  ,INS ,NO  ,NO  ,HOME,END ,PSCR, \
         TRNS,LEFT,DOWN,RGHT,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,PGUP,PGDN,     TRNS, \
         TRNS,FN11,DEL ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,          TRNS, \
         TRNS,TRNS,TRNS,          NO  ,                    TRNS,NO  ,TRNS,TRNS),
@@ -33,7 +33,7 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KEYMAP_ANSI(
         FN21,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,MUTE,VOLD,VOLU,TRNS, \
         BTLD,FN11,UP  ,TRNS,TRNS,FN10,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,FN12, \
-        TRNS,LEFT,DOWN,RGHT,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,     TRNS, \
+        TRNS,LEFT,DOWN,RGHT,TRNS,FN14,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,     TRNS, \
         TRNS,TRNS,TRNS,FN13,TRNS,TRNS,TRNS,TRNS,MPRV,MNXT,TRNS,          TRNS, \
         TRNS,FN20,TRNS,          MPLY,                    TRNS,TRNS,TRNS,TRNS),
 };
@@ -41,7 +41,8 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 enum macro_id {
   ELIXIR_PIPE,
   LOREM,
-  RUN_CONSOLE
+  RUN_CONSOLE,
+  GIT
 };
 
 const action_t PROGMEM fn_actions[] = {
@@ -54,6 +55,7 @@ const action_t PROGMEM fn_actions[] = {
     [11] = ACTION_MACRO(LOREM),
     [12] = ACTION_MACRO(ELIXIR_PIPE),
     [13] = ACTION_MACRO(RUN_CONSOLE),
+    [14] = ACTION_MACRO(GIT),
     [20] = ACTION_MODS_KEY(MOD_RCTL|MOD_RALT, KC_DEL), // Ctrl-Alt-Del
     [21] = ACTION_MODS_KEY(MOD_LCTL, KC_GRV) // Ctrl-` for ConEmu
 };
@@ -85,6 +87,10 @@ const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt)
 			  T(LEFT), T(ENT),
 			  END
 	              ):
+		      MACRO_NONE);
+	  case GIT:
+	      return (record->event.pressed ?
+	              MACRO(I(0), T(G), T(I), T(T), T(SPC), END):
 		      MACRO_NONE);
      }
      return MACRO_NONE;	 
